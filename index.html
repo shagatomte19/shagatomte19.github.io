@@ -6,9 +6,8 @@
     <title>Enamul Hasan Shagato - AI Researcher</title>
     <meta name="description" content="AI Researcher specializing in Computer Vision, NLP, and Machine Learning">
     
-    <!-- Favicon - Cartoon Bear -->
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐻</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐻</text></svg>">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Enamul Hasan Shagato - AI Researcher">
@@ -23,9 +22,10 @@
     <meta name="twitter:description" content="AI Researcher specializing in Computer Vision, NLP, Robotics, and Machine Learning">
     <meta name="twitter:image" content="https://shagatomte19.github.io/shagato_dp.jpg">
     
+    <!-- Academic Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -35,35 +35,29 @@
         }
 
         :root {
-            --bg: #fafafa;
-            --bg-secondary: #ffffff;
-            --bg-alt: #f5f5f5;
-            --text: #1a1a1a;
-            --text-secondary: #555555;
-            --text-muted: #888888;
-            --accent: #2563eb;
-            --accent-hover: #1d4ed8;
-            --accent-light: rgba(37, 99, 235, 0.1);
-            --border: #e5e5e5;
-            --shadow: 0 1px 3px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+            --bg: #fcfcfc;
+            --bg-alt: #f7f7f7;
+            --text: #222222;
+            --text-secondary: #4a4a4a;
+            --text-muted: #777777;
+            --accent: #1a56db;
+            --accent-hover: #1e40af;
+            --accent-light: rgba(26, 86, 219, 0.08);
+            --border: #e0e0e0;
             --card-bg: #ffffff;
-            --transition: 0.3s ease;
+            --transition: 0.2s ease;
         }
 
         [data-theme="dark"] {
-            --bg: #0f0f0f;
-            --bg-secondary: #1a1a1a;
-            --bg-alt: #141414;
-            --text: #e5e5e5;
-            --text-secondary: #a3a3a3;
-            --text-muted: #737373;
-            --accent: #3b82f6;
-            --accent-hover: #60a5fa;
-            --accent-light: rgba(59, 130, 246, 0.15);
+            --bg: #111111;
+            --bg-alt: #161616;
+            --text: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --text-muted: #808080;
+            --accent: #4a8fe7;
+            --accent-hover: #6aa3eb;
+            --accent-light: rgba(74, 143, 231, 0.12);
             --border: #2a2a2a;
-            --shadow: 0 1px 3px rgba(0,0,0,0.3);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.4);
             --card-bg: #1a1a1a;
         }
 
@@ -72,18 +66,18 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.7;
-            font-size: 16px;
+            line-height: 1.65;
+            font-size: 14px;
             transition: background var(--transition), color var(--transition);
         }
 
         .container {
-            max-width: 800px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
 
         /* Navigation */
@@ -93,18 +87,19 @@
             background: var(--bg);
             border-bottom: 1px solid var(--border);
             z-index: 100;
-            transition: background var(--transition), border-color var(--transition);
+            transition: all var(--transition);
         }
 
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 1.5rem;
+            padding: 0.75rem 2rem;
         }
 
         .logo {
-            font-weight: 700;
+            font-family: 'Crimson Text', Georgia, serif;
+            font-weight: 600;
             font-size: 1.1rem;
             color: var(--text);
             text-decoration: none;
@@ -114,175 +109,136 @@
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
         /* Theme Toggle */
         .theme-toggle {
             background: none;
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 0.5rem;
+            border-radius: 6px;
+            padding: 0.4rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all var(--transition);
-            color: var(--text);
+            color: var(--text-muted);
         }
 
         .theme-toggle:hover {
             border-color: var(--accent);
-            background: var(--accent-light);
+            color: var(--accent);
         }
 
         .theme-toggle svg {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
         }
 
-        .theme-toggle .sun-icon {
-            display: none;
-        }
-
-        [data-theme="dark"] .theme-toggle .sun-icon {
-            display: block;
-        }
-
-        [data-theme="dark"] .theme-toggle .moon-icon {
-            display: none;
-        }
+        .theme-toggle .sun-icon { display: none; }
+        [data-theme="dark"] .theme-toggle .sun-icon { display: block; }
+        [data-theme="dark"] .theme-toggle .moon-icon { display: none; }
 
         .hamburger {
             display: none;
             flex-direction: column;
             gap: 4px;
             cursor: pointer;
-            padding: 5px;
+            padding: 4px;
         }
 
         .hamburger span {
-            width: 20px;
-            height: 2px;
+            width: 18px;
+            height: 1.5px;
             background: var(--text);
             transition: all 0.3s;
         }
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(4px, -4px);
-        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.75rem;
             list-style: none;
         }
 
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
             transition: color 0.2s;
-            position: relative;
         }
 
         .nav-links a:hover {
             color: var(--accent);
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.2s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero/Header Section */
+        /* Header Section */
         .header {
-            padding: 4rem 0 3rem;
+            padding: 3rem 0 2.5rem;
             border-bottom: 1px solid var(--border);
-            background: var(--bg);
-            transition: background var(--transition), border-color var(--transition);
+            transition: border-color var(--transition);
         }
 
         .header-content {
             display: flex;
-            gap: 2rem;
+            gap: 1.75rem;
             align-items: flex-start;
         }
 
         .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 12px;
+            width: 130px;
+            height: 130px;
+            border-radius: 6px;
             object-fit: cover;
-            background: var(--border);
             flex-shrink: 0;
-            border: 3px solid var(--border);
-            transition: border-color var(--transition), transform 0.3s;
-        }
-
-        .profile-image:hover {
-            transform: scale(1.02);
-            border-color: var(--accent);
+            border: 2px solid var(--border);
+            transition: border-color var(--transition);
         }
 
         .header-text h1 {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 2rem;
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.75rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             color: var(--text);
             transition: color var(--transition);
         }
 
         .header-text .title {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             color: var(--accent);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             font-weight: 500;
         }
 
         .header-text .affiliation {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            margin-bottom: 1rem;
+            margin-bottom: 0.85rem;
+            line-height: 1.5;
             transition: color var(--transition);
         }
 
         .header-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.75rem 1.25rem;
+            gap: 0.5rem 1rem;
         }
 
         .header-links a {
             color: var(--accent);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
             display: inline-flex;
             align-items: center;
-            gap: 0.3rem;
-            padding: 0.35rem 0;
-            transition: all 0.2s;
+            gap: 0.25rem;
+            transition: color 0.2s;
         }
 
         .header-links a:hover {
@@ -291,7 +247,7 @@
 
         /* Section Styles */
         section {
-            padding: 2.5rem 0;
+            padding: 2rem 0;
             border-bottom: 1px solid var(--border);
             transition: border-color var(--transition);
         }
@@ -300,45 +256,25 @@
             border-bottom: none;
         }
 
-        /* Alternating section backgrounds */
-        section:nth-of-type(even) {
-            background: var(--bg-alt);
-            margin-left: -1.5rem;
-            margin-right: -1.5rem;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-
         .section-title {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 1.4rem;
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             color: var(--text);
             transition: color var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
-        .section-title::before {
-            content: '';
-            width: 4px;
-            height: 1.2em;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-
-        /* About/Bio Section */
+        /* Bio Section */
         .bio {
             color: var(--text-secondary);
-            font-size: 1rem;
-            line-height: 1.8;
+            font-size: 0.9rem;
+            line-height: 1.75;
             transition: color var(--transition);
         }
 
         .bio p {
-            margin-bottom: 1rem;
+            margin-bottom: 0.85rem;
         }
 
         .bio p:last-child {
@@ -349,15 +285,15 @@
         .interests-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.4rem;
         }
 
         .interest-tag {
-            background: var(--card-bg);
+            background: var(--bg-alt);
             border: 1px solid var(--border);
-            padding: 0.45rem 0.95rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 3px;
+            font-size: 0.75rem;
             color: var(--text-secondary);
             transition: all 0.2s;
         }
@@ -365,7 +301,6 @@
         .interest-tag:hover {
             border-color: var(--accent);
             color: var(--accent);
-            background: var(--accent-light);
         }
 
         /* News Section */
@@ -376,18 +311,10 @@
         .news-item {
             display: flex;
             gap: 1rem;
-            padding: 0.85rem 0;
-            border-bottom: 1px solid var(--border);
-            transition: all 0.2s;
-        }
-
-        .news-item:hover {
-            padding-left: 0.5rem;
-            background: var(--accent-light);
-            margin-left: -0.5rem;
-            margin-right: -0.5rem;
-            padding-right: 0.5rem;
-            border-radius: 6px;
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed var(--border);
+            font-size: 0.85rem;
+            transition: all var(--transition);
         }
 
         .news-item:last-child {
@@ -396,23 +323,20 @@
 
         .news-date {
             color: var(--text-muted);
-            font-size: 0.85rem;
-            min-width: 90px;
+            font-size: 0.8rem;
+            min-width: 75px;
             flex-shrink: 0;
-            font-weight: 500;
             transition: color var(--transition);
         }
 
         .news-content {
             color: var(--text-secondary);
-            font-size: 0.95rem;
             transition: color var(--transition);
         }
 
         .news-content a {
             color: var(--accent);
             text-decoration: none;
-            font-weight: 500;
         }
 
         .news-content a:hover {
@@ -421,35 +345,28 @@
 
         /* Publications Section */
         .publication {
-            padding: 1.25rem;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            background: var(--card-bg);
-            transition: all 0.2s;
-        }
-
-        .publication:hover {
-            border-color: var(--accent);
-            box-shadow: var(--shadow-md);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            transition: all var(--transition);
         }
 
         .publication:last-of-type {
-            margin-bottom: 0;
+            border-bottom: none;
         }
 
         .pub-title {
+            font-family: 'Crimson Text', Georgia, serif;
             font-weight: 600;
+            font-size: 0.95rem;
             color: var(--text);
-            margin-bottom: 0.4rem;
-            line-height: 1.5;
+            margin-bottom: 0.25rem;
+            line-height: 1.45;
             transition: color var(--transition);
         }
 
         .pub-title a {
             color: var(--text);
             text-decoration: none;
-            transition: color 0.2s;
         }
 
         .pub-title a:hover {
@@ -457,38 +374,42 @@
         }
 
         .pub-authors {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
             transition: color var(--transition);
         }
 
         .pub-authors .highlight {
             font-weight: 600;
+            color: var(--text);
+        }
+
+        [data-theme="dark"] .pub-authors .highlight {
             color: var(--accent);
         }
 
         .pub-venue {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             font-style: italic;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             transition: color var(--transition);
         }
 
         .pub-links {
             display: flex;
-            gap: 0.6rem;
+            gap: 0.5rem;
             flex-wrap: wrap;
         }
 
         .pub-links a {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: var(--accent);
             text-decoration: none;
-            padding: 0.3rem 0.7rem;
+            padding: 0.2rem 0.5rem;
             border: 1px solid var(--accent);
-            border-radius: 5px;
+            border-radius: 3px;
             transition: all 0.2s;
         }
 
@@ -499,43 +420,43 @@
 
         .pub-note {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            padding-top: 1rem;
+            font-size: 0.85rem;
             font-style: italic;
+            margin-top: 0.75rem;
             transition: color var(--transition);
         }
 
         /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
         .project {
-            padding: 1.25rem;
+            padding: 1rem;
             border: 1px solid var(--border);
-            border-radius: 10px;
-            margin-bottom: 1rem;
+            border-radius: 4px;
             background: var(--card-bg);
             transition: all 0.2s;
         }
 
         .project:hover {
             border-color: var(--accent);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-
-        .project:last-child {
-            margin-bottom: 0;
         }
 
         .project-title {
+            font-family: 'Crimson Text', Georgia, serif;
             font-weight: 600;
+            font-size: 0.9rem;
             color: var(--text);
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.35rem;
             transition: color var(--transition);
         }
 
         .project-title a {
             color: var(--text);
             text-decoration: none;
-            transition: color 0.2s;
         }
 
         .project-title a:hover {
@@ -543,161 +464,128 @@
         }
 
         .project-desc {
-            font-size: 0.95rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
-            margin-bottom: 0.75rem;
-            line-height: 1.6;
+            margin-bottom: 0.6rem;
+            line-height: 1.55;
             transition: color var(--transition);
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.4rem;
+            gap: 0.3rem;
         }
 
         .tech-tag {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: var(--accent);
             background: var(--accent-light);
-            padding: 0.25rem 0.6rem;
-            border-radius: 4px;
-            font-weight: 500;
+            padding: 0.15rem 0.45rem;
+            border-radius: 2px;
             transition: all var(--transition);
         }
 
         /* Experience Section */
         .experience-item {
-            padding: 1.25rem;
-            border-left: 3px solid var(--accent);
-            margin-bottom: 1rem;
-            background: var(--card-bg);
-            border-radius: 0 10px 10px 0;
-            transition: all 0.2s;
-        }
-
-        .experience-item:hover {
-            background: var(--accent-light);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            transition: all var(--transition);
         }
 
         .experience-item:last-child {
-            margin-bottom: 0;
+            border-bottom: none;
         }
 
         .exp-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.3rem;
+            align-items: baseline;
+            margin-bottom: 0.2rem;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
 
         .exp-title {
+            font-family: 'Crimson Text', Georgia, serif;
             font-weight: 600;
+            font-size: 0.95rem;
             color: var(--text);
             transition: color var(--transition);
         }
 
         .exp-date {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
-            background: var(--bg-alt);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            transition: all var(--transition);
+            transition: color var(--transition);
         }
 
         .exp-org {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             transition: color var(--transition);
         }
 
         .exp-details {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
-            list-style-position: inside;
-            padding-left: 0;
+            margin-left: 1.25rem;
             transition: color var(--transition);
         }
 
         .exp-details li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
 
         .exp-gpa {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-top: 0.3rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
             transition: color var(--transition);
         }
 
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
         }
 
-        .skill-category {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.25rem;
-            transition: all 0.2s;
-        }
-
-        .skill-category:hover {
-            border-color: var(--accent);
-            box-shadow: var(--shadow);
-        }
-
         .skill-category h4 {
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: var(--accent);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .skill-category p {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.55;
             transition: color var(--transition);
         }
 
         /* Contact Section */
-        .contact-info {
-            display: flex;
-            flex-direction: column;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 0.75rem;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            font-size: 0.95rem;
-            padding: 0.75rem 1rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            transition: all 0.2s;
-        }
-
-        .contact-item:hover {
-            border-color: var(--accent);
-            background: var(--accent-light);
+            gap: 0.5rem;
+            font-size: 0.8rem;
         }
 
         .contact-item span {
             color: var(--text-muted);
-            min-width: 70px;
-            font-weight: 500;
+            min-width: 55px;
+            font-size: 0.75rem;
             transition: color var(--transition);
         }
 
@@ -716,52 +604,50 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-            padding: 1rem 0;
+            gap: 0.4rem;
+            padding: 0.75rem 0;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.75rem;
         }
 
         .visitor-counter img {
-            border-radius: 4px;
+            border-radius: 2px;
+            height: 18px;
         }
 
         /* Footer */
         footer {
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             text-align: center;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             border-top: 1px solid var(--border);
-            background: var(--bg-alt);
             transition: all var(--transition);
         }
 
         /* Back to Top Button */
         .back-to-top {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 45px;
-            height: 45px;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 38px;
+            height: 38px;
             background: var(--accent);
             color: white;
             border: none;
-            border-radius: 50%;
+            border-radius: 4px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s;
-            box-shadow: var(--shadow-md);
+            transition: all 0.2s;
             z-index: 99;
         }
 
         .back-to-top:hover {
             background: var(--accent-hover);
-            transform: translateY(-3px);
         }
 
         .back-to-top.visible {
@@ -770,12 +656,16 @@
         }
 
         .back-to-top svg {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+
             .hamburger {
                 display: flex;
             }
@@ -784,22 +674,18 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 250px;
+                width: 220px;
                 height: 100vh;
                 background: var(--bg);
                 flex-direction: column;
-                padding: 4rem 2rem;
+                padding: 3.5rem 1.5rem;
                 transition: right 0.3s, background var(--transition);
                 border-left: 1px solid var(--border);
-                gap: 1.5rem;
+                gap: 1.25rem;
             }
 
             .nav-links.active {
                 right: 0;
-            }
-
-            .nav-links a::after {
-                display: none;
             }
 
             .header-content {
@@ -813,39 +699,40 @@
             }
 
             .header-text h1 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
+            }
+
+            .profile-image {
+                width: 110px;
+                height: 110px;
             }
 
             .news-item {
                 flex-direction: column;
-                gap: 0.25rem;
+                gap: 0.15rem;
             }
 
-            .news-item:hover {
-                padding-left: 0.75rem;
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
 
             .exp-header {
                 flex-direction: column;
-                gap: 0.25rem;
+                gap: 0.15rem;
             }
+        }
 
+        @media (max-width: 480px) {
             .skills-grid {
                 grid-template-columns: 1fr;
-            }
-
-            section:nth-of-type(even) {
-                margin-left: -1.5rem;
-                margin-right: -1.5rem;
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
-
-            .back-to-top {
-                bottom: 1.5rem;
-                right: 1.5rem;
-                width: 40px;
-                height: 40px;
             }
         }
 
@@ -854,13 +741,9 @@
             nav, .hamburger, .theme-toggle, .back-to-top, .visitor-counter {
                 display: none !important;
             }
-            
-            section {
-                page-break-inside: avoid;
-            }
 
             body {
-                font-size: 12pt;
+                font-size: 11pt;
                 background: white;
                 color: black;
             }
@@ -869,8 +752,8 @@
                 max-width: 100%;
             }
 
-            section:nth-of-type(even) {
-                background: white;
+            section {
+                page-break-inside: avoid;
             }
         }
     </style>
@@ -915,9 +798,9 @@
                     <div class="header-links">
                         <a href="mailto:enamulhasanshagato@gmail.com">📧 Email</a>
                         <a href="https://github.com/shagatomte19" target="_blank">💻 GitHub</a>
-                        <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">📚 Google Scholar</a>
+                        <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">📚 Scholar</a>
                         <a href="https://www.linkedin.com/in/shagatomte19/" target="_blank">💼 LinkedIn</a>
-                        <a href="https://drive.google.com/file/d/13L3Eo-pZBJgYraKCtiPYu5N5zJ_pKW8c/view?usp=sharing" target="_blank">📄 CV [PDF]</a>
+                        <a href="https://drive.google.com/file/d/13L3Eo-pZBJgYraKCtiPYu5N5zJ_pKW8c/view?usp=sharing" target="_blank">📄 CV</a>
                     </div>
                 </div>
             </div>
@@ -947,8 +830,8 @@
                 <span class="interest-tag">Autonomous Systems</span>
                 <span class="interest-tag">Document Understanding</span>
                 <span class="interest-tag">Multimodal Learning</span>
-                <span class="interest-tag">Edge AI & Model Optimization</span>
-                <span class="interest-tag">MLOps & Deployment</span>
+                <span class="interest-tag">Edge AI</span>
+                <span class="interest-tag">MLOps</span>
                 <span class="interest-tag">Generative AI</span>
             </div>
         </section>
@@ -958,11 +841,11 @@
             <ul class="news-list">
                 <li class="news-item">
                     <span class="news-date">Jan 2025</span>
-                    <span class="news-content">Launched <a href="https://github.com/shagatomte19">InvoiceVision</a> — an invoice data extraction tool using Qwen 2.5 VL</span>
+                    <span class="news-content">Launched <a href="https://github.com/shagatomte19">InvoiceVision</a> — invoice extraction using Qwen 2.5 VL</span>
                 </li>
                 <li class="news-item">
                     <span class="news-date">Dec 2024</span>
-                    <span class="news-content">Released <a href="https://github.com/shagatomte19">DocShield</a> for automatic PII redaction in documents</span>
+                    <span class="news-content">Released <a href="https://github.com/shagatomte19">DocShield</a> for automatic PII redaction</span>
                 </li>
                 <li class="news-item">
                     <span class="news-date">Jul 2025</span>
@@ -1001,78 +884,89 @@
 
         <section id="projects">
             <h2 class="section-title">Selected Projects</h2>
-            
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">InvoiceVision</a>
+            <div class="projects-grid">
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">InvoiceVision</a>
+                    </div>
+                    <p class="project-desc">
+                        Streamlit app for extracting structured data from invoice images using Qwen 2.5 VL via OpenRouter API.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Qwen 2.5 VL</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
                 </div>
-                <p class="project-desc">
-                    Streamlit application for extracting structured data from invoice images using Qwen 2.5 VL via OpenRouter API. Achieves high accuracy in field extraction for various invoice formats.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Qwen 2.5 VL</span>
-                    <span class="tech-tag">OpenRouter</span>
-                    <span class="tech-tag">Streamlit</span>
-                    <span class="tech-tag">Python</span>
-                </div>
-            </div>
 
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">DocShield</a>
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">DocShield</a>
+                    </div>
+                    <p class="project-desc">
+                        Automated PII detection and redaction for PDF documents using OCR and pattern recognition.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">EasyOCR</span>
+                        <span class="tech-tag">PyMuPDF</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
                 </div>
-                <p class="project-desc">
-                    Automated PII detection and redaction system for PDF documents. Uses OCR and pattern recognition to identify and mask sensitive information while preserving document structure.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">EasyOCR</span>
-                    <span class="tech-tag">PyMuPDF</span>
-                    <span class="tech-tag">Regex</span>
-                    <span class="tech-tag">Streamlit</span>
-                </div>
-            </div>
 
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">Text-to-Image Generation with AttnGAN</a>
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">Text-to-Image with AttnGAN</a>
+                    </div>
+                    <p class="project-desc">
+                        Attention-driven text-to-image synthesis using AttnGAN architecture with word-level attention.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">AttnGAN</span>
+                        <span class="tech-tag">GANs</span>
+                    </div>
                 </div>
-                <p class="project-desc">
-                    Implementation of attention-driven text-to-image synthesis using AttnGAN architecture. Generates high-fidelity images from natural language descriptions with word-level attention.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">PyTorch</span>
-                    <span class="tech-tag">AttnGAN</span>
-                    <span class="tech-tag">NLP</span>
-                    <span class="tech-tag">Computer Vision</span>
-                </div>
-            </div>
 
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">Car Theft Detection System</a>
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">Car Theft Detection</a>
+                    </div>
+                    <p class="project-desc">
+                        Real-time vehicle detection using YOLOv8, optimized for Raspberry Pi deployment.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">YOLOv8</span>
+                        <span class="tech-tag">Edge AI</span>
+                        <span class="tech-tag">OpenCV</span>
+                    </div>
                 </div>
-                <p class="project-desc">
-                    Real-time vehicle theft detection using YOLOv8, optimized for Raspberry Pi deployment. Trained on custom dataset with edge-optimized inference pipeline.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">YOLOv8</span>
-                    <span class="tech-tag">Raspberry Pi</span>
-                    <span class="tech-tag">Edge AI</span>
-                    <span class="tech-tag">OpenCV</span>
-                </div>
-            </div>
 
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">Breast Cancer Classification</a>
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">Breast Cancer Classification</a>
+                    </div>
+                    <p class="project-desc">
+                        SVM-based classification with hyperparameter optimization using GridSearchCV.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">SVM</span>
+                        <span class="tech-tag">ML</span>
+                    </div>
                 </div>
-                <p class="project-desc">
-                    SVM-based classification system with hyperparameter optimization using grid search and cross-validation. Includes comprehensive feature analysis and model evaluation.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Scikit-learn</span>
-                    <span class="tech-tag">SVM</span>
-                    <span class="tech-tag">GridSearchCV</span>
+
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">House Price Prediction</a>
+                    </div>
+                    <p class="project-desc">
+                        Regression model using feature engineering for accurate house price predictions.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Regression</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Sklearn</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1087,8 +981,8 @@
                 </div>
                 <div class="exp-org">The Sparks Foundation (Remote)</div>
                 <ul class="exp-details">
-                    <li>Developed predictive models for house price prediction using feature engineering and regression algorithms</li>
-                    <li>Built SVM-based classification pipeline for breast cancer detection with hyperparameter tuning</li>
+                    <li>Developed predictive models for house price prediction using feature engineering</li>
+                    <li>Built SVM classification pipeline for breast cancer detection with hyperparameter tuning</li>
                 </ul>
             </div>
 
@@ -1131,7 +1025,7 @@
                 </div>
                 <div class="skill-category">
                     <h4>Robotics</h4>
-                    <p>ROS2, SLAM, Robot Perception, Gazebo, Navigation Stack</p>
+                    <p>ROS2, SLAM, Robot Perception, Gazebo, Nav Stack</p>
                 </div>
                 <div class="skill-category">
                     <h4>Tools & Platforms</h4>
@@ -1139,18 +1033,18 @@
                 </div>
                 <div class="skill-category">
                     <h4>Computer Vision</h4>
-                    <p>Object Detection, Image Segmentation, OCR, YOLO, CNNs</p>
+                    <p>Object Detection, Segmentation, OCR, YOLO, CNNs</p>
                 </div>
                 <div class="skill-category">
                     <h4>NLP & LLMs</h4>
-                    <p>Transformers, RAG, Prompt Engineering, Text Generation</p>
+                    <p>Transformers, RAG, Prompt Engineering, Generation</p>
                 </div>
             </div>
         </section>
 
         <section id="contact">
             <h2 class="section-title">Contact</h2>
-            <div class="contact-info">
+            <div class="contact-grid">
                 <div class="contact-item">
                     <span>Email</span>
                     <a href="mailto:enamulhasanshagato@gmail.com">enamulhasanshagato@gmail.com</a>
@@ -1165,7 +1059,7 @@
                 </div>
                 <div class="contact-item">
                     <span>Scholar</span>
-                    <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">Google Scholar Profile</a>
+                    <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">Google Scholar</a>
                 </div>
             </div>
         </section>
@@ -1173,12 +1067,11 @@
 
     <footer>
         <div class="container">
-            <!-- Visitor Counter -->
             <div class="visitor-counter">
-                <span>👀 Visitors:</span>
-                <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fshagatomte19.github.io&count_bg=%232563EB&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=true" alt="visitor count"/>
+                <span>Visitors:</span>
+                <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fshagatomte19.github.io&count_bg=%231a56db&title_bg=%23777777&icon=&icon_color=%23E7E7E7&title=&edge_flat=true" alt="visitor count"/>
             </div>
-            <p>© 2025 Enamul Hasan Shagato · Last updated: January 2025</p>
+            <p>© 2026 Enamul Hasan Shagato · Last updated: January 2026</p>
         </div>
     </footer>
 
@@ -1193,31 +1086,21 @@
         // Theme Toggle
         function toggleTheme() {
             const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
+            const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
         }
 
-        // Load saved theme or system preference
-        function loadTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            } else if (systemPrefersDark) {
+        // Load saved theme
+        (function() {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (prefersDark) {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
-        }
-
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('theme')) {
-                document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-            }
-        });
+        })();
 
         // Mobile Menu
         function toggleMenu() {
@@ -1230,34 +1113,18 @@
             document.querySelector('.hamburger').classList.remove('active');
         }
 
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
-            const nav = document.querySelector('nav');
-            if (!nav.contains(e.target)) {
-                closeMenu();
-            }
+            if (!document.querySelector('nav').contains(e.target)) closeMenu();
         });
 
-        // Back to Top Button
-        const backToTopBtn = document.getElementById('backToTop');
-
+        // Back to Top
+        const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
+            backToTop.classList.toggle('visible', window.scrollY > 300);
         });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
-        // Initialize theme on page load
-        loadTheme();
     </script>
 </body>
 </html>
