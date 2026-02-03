@@ -4,28 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enamul Hasan Shagato - AI Researcher</title>
-    <meta name="description" content="AI Researcher specializing in Computer Vision, NLP, and Machine Learning">
+    <meta name="description" content="AI Researcher specializing in Computer Vision, NLP, Robotics, and Machine Learning">
     
-    <!-- Favicon - Cartoon Bear -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐻</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐻</text></svg>">
     
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Enamul Hasan Shagato - AI Researcher">
     <meta property="og:description" content="AI Researcher specializing in Computer Vision, NLP, Robotics, and Machine Learning">
     <meta property="og:image" content="https://shagatomte19.github.io/shagato_dp.jpg">
     <meta property="og:url" content="https://shagatomte19.github.io">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Enamul Hasan Shagato - AI Researcher">
-    <meta name="twitter:description" content="AI Researcher specializing in Computer Vision, NLP, Robotics, and Machine Learning">
-    <meta name="twitter:image" content="https://shagatomte19.github.io/shagato_dp.jpg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -35,15 +25,15 @@
         }
 
         :root {
-            --bg: #fafafa;
-            --bg-secondary: #ffffff;
-            --text: #1a1a1a;
-            --text-secondary: #555555;
-            --text-muted: #888888;
-            --accent: #2563eb;
-            --accent-hover: #1d4ed8;
-            --border: #e5e5e5;
-            --shadow: 0 1px 3px rgba(0,0,0,0.08);
+            --bg: #1a1a1a;
+            --bg-secondary: #242424;
+            --bg-tertiary: #2d2d2d;
+            --text: #e8e6e3;
+            --text-secondary: #b8b5b0;
+            --text-muted: #7a7875;
+            --accent: #c9a86c;
+            --accent-hover: #dfc08a;
+            --border: #3d3d3d;
         }
 
         html {
@@ -51,24 +41,26 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.7;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
 
         /* Navigation */
         nav {
-            position: sticky;
+            position: fixed;
             top: 0;
-            background: var(--bg);
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             z-index: 100;
         }
@@ -77,26 +69,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 1.5rem;
+            padding: 1rem 2rem;
         }
 
         .logo {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--text);
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--accent);
             text-decoration: none;
+            letter-spacing: 0.5px;
         }
 
         .hamburger {
             display: none;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
             cursor: pointer;
             padding: 5px;
         }
 
         .hamburger span {
-            width: 20px;
+            width: 22px;
             height: 2px;
             background: var(--text);
             transition: all 0.3s;
@@ -111,20 +105,22 @@
         }
 
         .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(4px, -4px);
+            transform: rotate(-45deg) translate(5px, -5px);
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.2s;
         }
 
@@ -132,71 +128,70 @@
             color: var(--accent);
         }
 
-        /* Hero/Header Section */
+        /* Header */
         .header {
-            padding: 4rem 0 3rem;
+            padding: 8rem 0 4rem;
+            text-align: center;
             border-bottom: 1px solid var(--border);
         }
 
-        .header-content {
-            display: flex;
-            gap: 2rem;
-            align-items: flex-start;
-        }
-
         .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
             object-fit: cover;
-            background: var(--border);
-            flex-shrink: 0;
-            border: 3px solid var(--border);
+            border: 3px solid var(--accent);
+            margin-bottom: 1.5rem;
         }
 
-        .header-text h1 {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 2rem;
-            font-weight: 600;
+        .header h1 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 2.8rem;
+            font-weight: 500;
             margin-bottom: 0.5rem;
             color: var(--text);
+            letter-spacing: 1px;
         }
 
-        .header-text .title {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
+        .header .title {
+            font-size: 1rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
             margin-bottom: 0.75rem;
         }
 
-        .header-text .affiliation {
+        .header .affiliation {
             font-size: 0.95rem;
             color: var(--text-muted);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .header-links {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 0.75rem 1.25rem;
+            gap: 1rem;
         }
 
         .header-links a {
-            color: var(--accent);
+            color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: all 0.2s;
         }
 
         .header-links a:hover {
-            text-decoration: underline;
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
-        /* Section Styles */
+        /* Sections */
         section {
-            padding: 2.5rem 0;
+            padding: 4rem 0;
             border-bottom: 1px solid var(--border);
         }
 
@@ -205,53 +200,74 @@
         }
 
         .section-title {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
             color: var(--text);
+            text-align: center;
+            position: relative;
         }
 
-        /* About/Bio Section */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+            margin: 0.75rem auto 0;
+        }
+
+        /* Bio */
         .bio {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
             color: var(--text-secondary);
-            font-size: 1rem;
-            line-height: 1.8;
+            font-size: 1.05rem;
+            line-height: 1.9;
         }
 
         .bio p {
             margin-bottom: 1rem;
         }
 
-        .bio p:last-child {
-            margin-bottom: 0;
-        }
-
         /* Research Interests */
         .interests-list {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .interest-tag {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
-            padding: 0.4rem 0.9rem;
-            border-radius: 4px;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
             font-size: 0.85rem;
             color: var(--text-secondary);
+            transition: all 0.2s;
         }
 
-        /* News Section */
+        .interest-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* News */
         .news-list {
             list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .news-item {
             display: flex;
-            gap: 1rem;
-            padding: 0.75rem 0;
+            gap: 1.5rem;
+            padding: 1rem 0;
             border-bottom: 1px solid var(--border);
         }
 
@@ -260,10 +276,10 @@
         }
 
         .news-date {
-            color: var(--text-muted);
+            color: var(--accent);
             font-size: 0.85rem;
-            min-width: 90px;
-            flex-shrink: 0;
+            min-width: 100px;
+            font-weight: 500;
         }
 
         .news-content {
@@ -272,29 +288,30 @@
         }
 
         .news-content a {
-            color: var(--accent);
+            color: var(--text);
             text-decoration: none;
+            border-bottom: 1px solid var(--accent);
         }
 
         .news-content a:hover {
-            text-decoration: underline;
+            color: var(--accent);
         }
 
-        /* Publications Section */
+        /* Publications */
         .publication {
-            padding: 1.25rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .publication:last-child {
-            border-bottom: none;
+            background: var(--bg-secondary);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
         }
 
         .pub-title {
-            font-weight: 600;
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: 500;
             color: var(--text);
-            margin-bottom: 0.4rem;
-            line-height: 1.5;
+            margin-bottom: 0.5rem;
         }
 
         .pub-title a {
@@ -313,20 +330,20 @@
         }
 
         .pub-authors .highlight {
-            font-weight: 600;
-            color: var(--text);
+            color: var(--accent);
+            font-weight: 500;
         }
 
         .pub-venue {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             font-style: italic;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .pub-links {
             display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
             flex-wrap: wrap;
         }
 
@@ -334,7 +351,7 @@
             font-size: 0.8rem;
             color: var(--accent);
             text-decoration: none;
-            padding: 0.25rem 0.6rem;
+            padding: 0.3rem 0.8rem;
             border: 1px solid var(--accent);
             border-radius: 3px;
             transition: all 0.2s;
@@ -342,30 +359,41 @@
 
         .pub-links a:hover {
             background: var(--accent);
-            color: white;
+            color: var(--bg);
         }
 
         .pub-note {
+            text-align: center;
             color: var(--text-muted);
-            font-size: 0.95rem;
-            padding-top: 1rem;
             font-style: italic;
+            margin-top: 1rem;
         }
 
-        /* Projects Section */
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
         .project {
-            padding: 1.25rem 0;
-            border-bottom: 1px solid var(--border);
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
         }
 
-        .project:last-child {
-            border-bottom: none;
+        .project:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
         }
 
         .project-title {
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 0.4rem;
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
         }
 
         .project-title a {
@@ -378,9 +406,9 @@
         }
 
         .project-desc {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             line-height: 1.6;
         }
 
@@ -393,15 +421,17 @@
         .tech-tag {
             font-size: 0.75rem;
             color: var(--text-muted);
-            background: var(--bg);
-            padding: 0.2rem 0.5rem;
+            background: var(--bg-tertiary);
+            padding: 0.25rem 0.6rem;
             border-radius: 3px;
-            border: 1px solid var(--border);
         }
 
-        /* Experience Section */
+        /* Experience */
         .experience-item {
-            padding: 1.25rem 0;
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 2rem;
+            padding: 1.5rem 0;
             border-bottom: 1px solid var(--border);
         }
 
@@ -409,23 +439,18 @@
             border-bottom: none;
         }
 
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.3rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+        .exp-date {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
         }
 
         .exp-title {
-            font-weight: 600;
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 500;
             color: var(--text);
-        }
-
-        .exp-date {
-            font-size: 0.85rem;
-            color: var(--text-muted);
+            margin-bottom: 0.3rem;
         }
 
         .exp-org {
@@ -436,7 +461,7 @@
 
         .exp-details {
             font-size: 0.9rem;
-            color: var(--text-secondary);
+            color: var(--text-muted);
             list-style-position: inside;
             padding-left: 0;
         }
@@ -447,59 +472,70 @@
 
         .exp-gpa {
             font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-top: 0.3rem;
+            color: var(--text-muted);
         }
 
-        /* Skills Section */
+        /* Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .skill-category h4 {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            color: var(--text);
+            color: var(--accent);
             margin-bottom: 0.5rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
         .skill-category p {
             font-size: 0.9rem;
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        /* Contact Section */
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.95rem;
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent);
         }
 
         .contact-item span {
+            display: block;
+            font-size: 0.75rem;
             color: var(--text-muted);
-            min-width: 70px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
         }
 
         .contact-item a {
-            color: var(--accent);
+            color: var(--text);
             text-decoration: none;
-            word-break: break-word;
+            font-size: 0.9rem;
         }
 
         .contact-item a:hover {
-            text-decoration: underline;
+            color: var(--accent);
         }
 
         /* Footer */
@@ -508,6 +544,7 @@
             text-align: center;
             color: var(--text-muted);
             font-size: 0.85rem;
+            border-top: 1px solid var(--border);
         }
 
         /* Responsive */
@@ -520,32 +557,22 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 250px;
+                width: 280px;
                 height: 100vh;
                 background: var(--bg);
                 flex-direction: column;
-                padding: 4rem 2rem;
+                padding: 5rem 2rem;
                 transition: right 0.3s;
                 border-left: 1px solid var(--border);
-                gap: 1.5rem;
+                gap: 2rem;
             }
 
             .nav-links.active {
                 right: 0;
             }
 
-            .header-content {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .header-links {
-                justify-content: center;
-            }
-
-            .header-text h1 {
-                font-size: 1.75rem;
+            .header h1 {
+                font-size: 2rem;
             }
 
             .news-item {
@@ -553,32 +580,19 @@
                 gap: 0.25rem;
             }
 
-            .exp-header {
-                flex-direction: column;
-                gap: 0.25rem;
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
             }
 
-            .skills-grid {
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* Print Styles */
         @media print {
-            nav, .hamburger {
+            nav {
                 display: none;
-            }
-            
-            section {
-                page-break-inside: avoid;
-            }
-
-            body {
-                font-size: 12pt;
-            }
-
-            .container {
-                max-width: 100%;
             }
         }
     </style>
@@ -586,7 +600,7 @@
 <body>
     <nav>
         <div class="container">
-            <a href="#" class="logo">Enamul Hasan Shagato</a>
+            <a href="#" class="logo">E. H. Shagato</a>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -594,9 +608,9 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about" onclick="closeMenu()">About</a></li>
-                <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+                <li><a href="#publications" onclick="closeMenu()">Research</a></li>
                 <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-                <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+                <li><a href="#experience" onclick="closeMenu()">CV</a></li>
                 <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
         </div>
@@ -604,20 +618,16 @@
 
     <header class="header">
         <div class="container">
-            <div class="header-content">
-                <img src="shagato_dp.jpg" alt="Enamul Hasan Shagato" class="profile-image">
-                <div class="header-text">
-                    <h1>Enamul Hasan Shagato</h1>
-                    <p class="title">AI Researcher & Robotics Engineer</p>
-                    <p class="affiliation">B.Sc. in Mechatronics Engineering<br>Rajshahi University of Engineering and Technology</p>
-                    <div class="header-links">
-                        <a href="mailto:enamulhasanshagato@gmail.com">📧 Email</a>
-                        <a href="https://github.com/shagatomte19" target="_blank">💻 GitHub</a>
-                        <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">📚 Google Scholar</a>
-                        <a href="https://www.linkedin.com/in/shagatomte19/" target="_blank">💼 LinkedIn</a>
-                        <a href="https://drive.google.com/file/d/13L3Eo-pZBJgYraKCtiPYu5N5zJ_pKW8c/view?usp=sharing" target="_blank">📄 CV [PDF]</a>
-                    </div>
-                </div>
+            <img src="shagato_dp.jpg" alt="Enamul Hasan Shagato" class="profile-image">
+            <h1>Enamul Hasan Shagato</h1>
+            <p class="title">AI Researcher & Robotics Engineer</p>
+            <p class="affiliation">Rajshahi University of Engineering and Technology</p>
+            <div class="header-links">
+                <a href="mailto:enamulhasanshagato@gmail.com">Email</a>
+                <a href="https://github.com/shagatomte19" target="_blank">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">Scholar</a>
+                <a href="https://www.linkedin.com/in/shagatomte19/" target="_blank">LinkedIn</a>
+                <a href="https://drive.google.com/file/d/13L3Eo-pZBJgYraKCtiPYu5N5zJ_pKW8c/view?usp=sharing" target="_blank">CV</a>
             </div>
         </div>
     </header>
@@ -627,10 +637,10 @@
             <h2 class="section-title">About</h2>
             <div class="bio">
                 <p>
-                    I am an AI researcher and robotics engineer with a focus on computer vision, natural language processing, and autonomous systems. My research interests lie at the intersection of deep learning, robotics, and practical applications, with emphasis on building efficient and deployable AI solutions.
+                    I am an AI researcher with focus on computer vision, natural language processing, and autonomous systems. My work lies at the intersection of deep learning and robotics, building efficient and deployable solutions.
                 </p>
                 <p>
-                    Currently, I am exploring multimodal learning, document understanding systems, robot perception, and edge deployment of ML models. I am actively seeking research opportunities and collaborations in these areas.
+                    Currently exploring multimodal learning, document understanding, robot perception, and edge AI deployment.
                 </p>
             </div>
         </section>
@@ -642,11 +652,8 @@
                 <span class="interest-tag">Natural Language Processing</span>
                 <span class="interest-tag">Robot Perception</span>
                 <span class="interest-tag">SLAM</span>
-                <span class="interest-tag">Autonomous Systems</span>
-                <span class="interest-tag">Document Understanding</span>
                 <span class="interest-tag">Multimodal Learning</span>
-                <span class="interest-tag">Edge AI & Model Optimization</span>
-                <span class="interest-tag">MLOps & Deployment</span>
+                <span class="interest-tag">Edge AI</span>
                 <span class="interest-tag">Generative AI</span>
             </div>
         </section>
@@ -656,19 +663,15 @@
             <ul class="news-list">
                 <li class="news-item">
                     <span class="news-date">Jan 2025</span>
-                    <span class="news-content">Launched <a href="https://github.com/shagatomte19">InvoiceVision</a> — an invoice data extraction tool using Qwen 2.5 VL</span>
+                    <span class="news-content">Released <a href="https://github.com/shagatomte19">InvoiceVision</a> — invoice extraction using Qwen 2.5 VL</span>
                 </li>
                 <li class="news-item">
                     <span class="news-date">Dec 2024</span>
-                    <span class="news-content">Released <a href="https://github.com/shagatomte19">DocShield</a> for automatic PII redaction in documents</span>
+                    <span class="news-content">Launched <a href="https://github.com/shagatomte19">DocShield</a> for automatic PII redaction</span>
                 </li>
                 <li class="news-item">
                     <span class="news-date">Jul 2025</span>
-                    <span class="news-content">Expected graduation from RUET with B.Sc. in Mechatronics Engineering</span>
-                </li>
-                <li class="news-item">
-                    <span class="news-date">Feb 2022</span>
-                    <span class="news-content">Completed Data Science internship at The Sparks Foundation</span>
+                    <span class="news-content">Expected graduation from RUET (Mechatronics Engineering)</span>
                 </li>
             </ul>
         </section>
@@ -678,141 +681,116 @@
             
             <div class="publication">
                 <div class="pub-title">
-                    <a href="#">Sample Publication Title: A Deep Learning Approach for Document Understanding</a>
+                    <a href="#">Sample: A Deep Learning Approach for Document Understanding</a>
                 </div>
                 <div class="pub-authors">
-                    <span class="highlight">Enamul Hasan Shagato</span>, Co-Author Name, Another Author
+                    <span class="highlight">Enamul Hasan Shagato</span>, Co-Author Name
                 </div>
-                <div class="pub-venue">Conference/Journal Name, 2024</div>
+                <div class="pub-venue">Conference Name, 2024</div>
                 <div class="pub-links">
                     <a href="#">PDF</a>
                     <a href="#">arXiv</a>
                     <a href="#">Code</a>
-                    <a href="#">BibTeX</a>
                 </div>
             </div>
 
-            <p class="pub-note">
-                Publications coming soon. Currently working on research in document understanding and multimodal learning.
-            </p>
+            <p class="pub-note">More publications coming soon.</p>
         </section>
 
         <section id="projects">
             <h2 class="section-title">Selected Projects</h2>
-            
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">InvoiceVision</a>
+            <div class="projects-grid">
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">InvoiceVision</a>
+                    </div>
+                    <p class="project-desc">
+                        Extract structured data from invoices using Qwen 2.5 VL via OpenRouter API.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Qwen 2.5 VL</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
                 </div>
-                <p class="project-desc">
-                    Streamlit application for extracting structured data from invoice images using Qwen 2.5 VL via OpenRouter API. Achieves high accuracy in field extraction for various invoice formats.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Qwen 2.5 VL</span>
-                    <span class="tech-tag">OpenRouter</span>
-                    <span class="tech-tag">Streamlit</span>
-                    <span class="tech-tag">Python</span>
-                </div>
-            </div>
 
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">DocShield</a>
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">DocShield</a>
+                    </div>
+                    <p class="project-desc">
+                        Automated PII detection and redaction for PDF documents using OCR.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">EasyOCR</span>
+                        <span class="tech-tag">PyMuPDF</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
                 </div>
-                <p class="project-desc">
-                    Automated PII detection and redaction system for PDF documents. Uses OCR and pattern recognition to identify and mask sensitive information while preserving document structure.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">EasyOCR</span>
-                    <span class="tech-tag">PyMuPDF</span>
-                    <span class="tech-tag">Regex</span>
-                    <span class="tech-tag">Streamlit</span>
-                </div>
-            </div>
 
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">Text-to-Image Generation with AttnGAN</a>
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">AttnGAN Text-to-Image</a>
+                    </div>
+                    <p class="project-desc">
+                        Attention-driven image synthesis from natural language descriptions.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">AttnGAN</span>
+                        <span class="tech-tag">GANs</span>
+                    </div>
                 </div>
-                <p class="project-desc">
-                    Implementation of attention-driven text-to-image synthesis using AttnGAN architecture. Generates high-fidelity images from natural language descriptions with word-level attention.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">PyTorch</span>
-                    <span class="tech-tag">AttnGAN</span>
-                    <span class="tech-tag">NLP</span>
-                    <span class="tech-tag">Computer Vision</span>
-                </div>
-            </div>
 
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">Car Theft Detection System</a>
-                </div>
-                <p class="project-desc">
-                    Real-time vehicle theft detection using YOLOv8, optimized for Raspberry Pi deployment. Trained on custom dataset with edge-optimized inference pipeline.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">YOLOv8</span>
-                    <span class="tech-tag">Raspberry Pi</span>
-                    <span class="tech-tag">Edge AI</span>
-                    <span class="tech-tag">OpenCV</span>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/shagatomte19">Breast Cancer Classification</a>
-                </div>
-                <p class="project-desc">
-                    SVM-based classification system with hyperparameter optimization using grid search and cross-validation. Includes comprehensive feature analysis and model evaluation.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Scikit-learn</span>
-                    <span class="tech-tag">SVM</span>
-                    <span class="tech-tag">GridSearchCV</span>
+                <div class="project">
+                    <div class="project-title">
+                        <a href="https://github.com/shagatomte19">Car Theft Detection</a>
+                    </div>
+                    <p class="project-desc">
+                        Real-time detection using YOLOv8, optimized for Raspberry Pi.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">YOLOv8</span>
+                        <span class="tech-tag">Edge AI</span>
+                        <span class="tech-tag">OpenCV</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="experience">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title">Experience & Education</h2>
             
             <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-title">Data Science & Business Analytics Intern</span>
-                    <span class="exp-date">Dec 2021 – Feb 2022</span>
+                <div class="exp-date">2020 – 2025</div>
+                <div>
+                    <div class="exp-title">B.Sc. Mechatronics Engineering</div>
+                    <div class="exp-org">RUET, Bangladesh</div>
+                    <p class="exp-gpa">GPA: 3.17 / 4.00</p>
                 </div>
-                <div class="exp-org">The Sparks Foundation (Remote)</div>
-                <ul class="exp-details">
-                    <li>Developed predictive models for house price prediction using feature engineering and regression algorithms</li>
-                    <li>Built SVM-based classification pipeline for breast cancer detection with hyperparameter tuning</li>
-                </ul>
             </div>
 
             <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-title">Additional Technical Coordinator</span>
-                    <span class="exp-date">2021 – 2023</span>
+                <div class="exp-date">Dec 2021 – Feb 2022</div>
+                <div>
+                    <div class="exp-title">Data Science Intern</div>
+                    <div class="exp-org">The Sparks Foundation</div>
+                    <ul class="exp-details">
+                        <li>Predictive modeling for house price prediction</li>
+                        <li>SVM classification for breast cancer detection</li>
+                    </ul>
                 </div>
-                <div class="exp-org">Robotic Society of RUET</div>
-                <ul class="exp-details">
-                    <li>Coordinated technical workshops and robotics competitions for 500+ students</li>
-                    <li>Facilitated knowledge sharing sessions on embedded systems and robotics</li>
-                </ul>
             </div>
-        </section>
 
-        <section id="education">
-            <h2 class="section-title">Education</h2>
-            
             <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-title">B.Sc. in Mechatronics Engineering</span>
-                    <span class="exp-date">Feb 2020 – Jul 2025</span>
+                <div class="exp-date">2021 – 2023</div>
+                <div>
+                    <div class="exp-title">Technical Coordinator</div>
+                    <div class="exp-org">Robotic Society of RUET</div>
+                    <ul class="exp-details">
+                        <li>Coordinated workshops and competitions for 500+ students</li>
+                    </ul>
                 </div>
-                <div class="exp-org">Rajshahi University of Engineering and Technology (RUET)</div>
-                <p class="exp-gpa">GPA: 3.17 / 4.00</p>
             </div>
         </section>
 
@@ -824,55 +802,45 @@
                     <p>Python, C++, SQL, JavaScript</p>
                 </div>
                 <div class="skill-category">
-                    <h4>ML/DL Frameworks</h4>
-                    <p>PyTorch, TensorFlow, Scikit-learn, Hugging Face, LangChain</p>
+                    <h4>ML/DL</h4>
+                    <p>PyTorch, TensorFlow, Hugging Face, LangChain</p>
                 </div>
                 <div class="skill-category">
                     <h4>Robotics</h4>
-                    <p>ROS2, SLAM, Robot Perception, Gazebo, Navigation Stack</p>
+                    <p>ROS2, SLAM, Gazebo, Navigation Stack</p>
                 </div>
                 <div class="skill-category">
-                    <h4>Tools & Platforms</h4>
-                    <p>Docker, FastAPI, Git, Linux, Streamlit, OpenCV</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Computer Vision</h4>
-                    <p>Object Detection, Image Segmentation, OCR, YOLO, CNNs</p>
-                </div>
-                <div class="skill-category">
-                    <h4>NLP & LLMs</h4>
-                    <p>Transformers, RAG, Prompt Engineering, Text Generation</p>
+                    <h4>Tools</h4>
+                    <p>Docker, FastAPI, Git, Linux, OpenCV</p>
                 </div>
             </div>
         </section>
 
         <section id="contact">
             <h2 class="section-title">Contact</h2>
-            <div class="contact-info">
+            <div class="contact-grid">
                 <div class="contact-item">
                     <span>Email</span>
                     <a href="mailto:enamulhasanshagato@gmail.com">enamulhasanshagato@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <span>GitHub</span>
-                    <a href="https://github.com/shagatomte19" target="_blank">github.com/shagatomte19</a>
+                    <a href="https://github.com/shagatomte19" target="_blank">shagatomte19</a>
                 </div>
                 <div class="contact-item">
                     <span>LinkedIn</span>
-                    <a href="https://www.linkedin.com/in/shagatomte19/" target="_blank">linkedin.com/in/shagatomte19</a>
+                    <a href="https://www.linkedin.com/in/shagatomte19/" target="_blank">shagatomte19</a>
                 </div>
                 <div class="contact-item">
                     <span>Scholar</span>
-                    <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">Google Scholar Profile</a>
+                    <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">Profile</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>© 2026 Enamul Hasan Shagato · Last updated: February 2026</p>
-        </div>
+        <p>© 2025 Enamul Hasan Shagato · Last updated: January 2025</p>
     </footer>
 
     <script>
@@ -886,10 +854,8 @@
             document.querySelector('.hamburger').classList.remove('active');
         }
 
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             const nav = document.querySelector('nav');
-            const hamburger = document.querySelector('.hamburger');
             if (!nav.contains(e.target)) {
                 closeMenu();
             }
