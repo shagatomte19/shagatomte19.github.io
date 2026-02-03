@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enamul Hasan Shagato - AI Researcher</title>
     <meta name="description" content="AI Researcher specializing in Computer Vision, NLP, and Machine Learning">
+    
+    <!-- Favicon - Cartoon Bear -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐻</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐻</text></svg>">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Enamul Hasan Shagato - AI Researcher">
+    <meta property="og:description" content="AI Researcher specializing in Computer Vision, NLP, Robotics, and Machine Learning">
+    <meta property="og:image" content="https://shagatomte19.github.io/shagato_dp.jpg">
+    <meta property="og:url" content="https://shagatomte19.github.io">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Enamul Hasan Shagato - AI Researcher">
+    <meta name="twitter:description" content="AI Researcher specializing in Computer Vision, NLP, Robotics, and Machine Learning">
+    <meta name="twitter:image" content="https://shagatomte19.github.io/shagato_dp.jpg">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -126,12 +145,13 @@
         }
 
         .profile-image {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             border-radius: 8px;
             object-fit: cover;
             background: var(--border);
             flex-shrink: 0;
+            border: 3px solid var(--border);
         }
 
         .header-text h1 {
@@ -157,7 +177,7 @@
         .header-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.75rem 1.25rem;
         }
 
         .header-links a {
@@ -325,6 +345,13 @@
             color: white;
         }
 
+        .pub-note {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            padding-top: 1rem;
+            font-style: italic;
+        }
+
         /* Projects Section */
         .project {
             padding: 1.25rem 0;
@@ -418,6 +445,12 @@
             margin-bottom: 0.3rem;
         }
 
+        .exp-gpa {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.3rem;
+        }
+
         /* Skills Section */
         .skills-grid {
             display: grid;
@@ -456,12 +489,13 @@
 
         .contact-item span {
             color: var(--text-muted);
-            min-width: 60px;
+            min-width: 70px;
         }
 
         .contact-item a {
             color: var(--accent);
             text-decoration: none;
+            word-break: break-word;
         }
 
         .contact-item a:hover {
@@ -523,6 +557,10 @@
                 flex-direction: column;
                 gap: 0.25rem;
             }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Print Styles */
@@ -533,6 +571,14 @@
             
             section {
                 page-break-inside: avoid;
+            }
+
+            body {
+                font-size: 12pt;
+            }
+
+            .container {
+                max-width: 100%;
             }
         }
     </style>
@@ -562,14 +608,14 @@
                 <img src="shagato_dp.jpg" alt="Enamul Hasan Shagato" class="profile-image">
                 <div class="header-text">
                     <h1>Enamul Hasan Shagato</h1>
-                    <p class="title">AI Researcher & MLOps Engineer</p>
+                    <p class="title">AI Researcher & Robotics Engineer</p>
                     <p class="affiliation">B.Sc. in Mechatronics Engineering<br>Rajshahi University of Engineering and Technology</p>
                     <div class="header-links">
-                        <a href="mailto:shagato@example.com">Email</a>
-                        <a href="https://github.com/shagatomte19" target="_blank">GitHub</a>
-                        <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-                        <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
-                        <a href="resume.pdf" target="_blank">CV [PDF]</a>
+                        <a href="mailto:enamulhasanshagato@gmail.com">📧 Email</a>
+                        <a href="https://github.com/shagatomte19" target="_blank">💻 GitHub</a>
+                        <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">📚 Google Scholar</a>
+                        <a href="https://www.linkedin.com/in/shagatomte19/" target="_blank">💼 LinkedIn</a>
+                        <a href="https://drive.google.com/file/d/13L3Eo-pZBJgYraKCtiPYu5N5zJ_pKW8c/view?usp=sharing" target="_blank">📄 CV [PDF]</a>
                     </div>
                 </div>
             </div>
@@ -581,10 +627,10 @@
             <h2 class="section-title">About</h2>
             <div class="bio">
                 <p>
-                    I am an AI researcher with a focus on computer vision, natural language processing, and developing production-ready machine learning systems. My research interests lie at the intersection of deep learning and practical applications, with emphasis on building efficient and scalable AI solutions.
+                    I am an AI researcher and robotics engineer with a focus on computer vision, natural language processing, and autonomous systems. My research interests lie at the intersection of deep learning, robotics, and practical applications, with emphasis on building efficient and deployable AI solutions.
                 </p>
                 <p>
-                    Currently, I am exploring multimodal learning, document understanding systems, and edge deployment of ML models. I am actively seeking research opportunities and collaborations in these areas.
+                    Currently, I am exploring multimodal learning, document understanding systems, robot perception, and edge deployment of ML models. I am actively seeking research opportunities and collaborations in these areas.
                 </p>
             </div>
         </section>
@@ -594,6 +640,9 @@
             <div class="interests-list">
                 <span class="interest-tag">Computer Vision</span>
                 <span class="interest-tag">Natural Language Processing</span>
+                <span class="interest-tag">Robot Perception</span>
+                <span class="interest-tag">SLAM</span>
+                <span class="interest-tag">Autonomous Systems</span>
                 <span class="interest-tag">Document Understanding</span>
                 <span class="interest-tag">Multimodal Learning</span>
                 <span class="interest-tag">Edge AI & Model Optimization</span>
@@ -607,11 +656,11 @@
             <ul class="news-list">
                 <li class="news-item">
                     <span class="news-date">Jan 2025</span>
-                    <span class="news-content">Launched <a href="#">InvoiceVision</a> - an invoice data extraction tool using Qwen 2.5 VL</span>
+                    <span class="news-content">Launched <a href="https://github.com/shagatomte19">InvoiceVision</a> — an invoice data extraction tool using Qwen 2.5 VL</span>
                 </li>
                 <li class="news-item">
                     <span class="news-date">Dec 2024</span>
-                    <span class="news-content">Released <a href="#">DocShield</a> for automatic PII redaction in documents</span>
+                    <span class="news-content">Released <a href="https://github.com/shagatomte19">DocShield</a> for automatic PII redaction in documents</span>
                 </li>
                 <li class="news-item">
                     <span class="news-date">Jul 2025</span>
@@ -643,8 +692,8 @@
                 </div>
             </div>
 
-            <p style="color: var(--text-muted); font-size: 0.95rem; padding-top: 1rem;">
-                <em>Publications coming soon. Currently working on research in document understanding and multimodal learning.</em>
+            <p class="pub-note">
+                Publications coming soon. Currently working on research in document understanding and multimodal learning.
             </p>
         </section>
 
@@ -763,7 +812,7 @@
                     <span class="exp-date">Feb 2020 – Jul 2025</span>
                 </div>
                 <div class="exp-org">Rajshahi University of Engineering and Technology (RUET)</div>
-                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.3rem;">GPA: 3.17 / 4.00</p>
+                <p class="exp-gpa">GPA: 3.17 / 4.00</p>
             </div>
         </section>
 
@@ -772,19 +821,27 @@
             <div class="skills-grid">
                 <div class="skill-category">
                     <h4>Languages</h4>
-                    <p>Python, SQL, C++, JavaScript</p>
+                    <p>Python, C++, SQL, JavaScript</p>
                 </div>
                 <div class="skill-category">
                     <h4>ML/DL Frameworks</h4>
-                    <p>PyTorch, TensorFlow, Scikit-learn, Hugging Face</p>
+                    <p>PyTorch, TensorFlow, Scikit-learn, Hugging Face, LangChain</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Robotics</h4>
+                    <p>ROS2, SLAM, Robot Perception, Gazebo, Navigation Stack</p>
                 </div>
                 <div class="skill-category">
                     <h4>Tools & Platforms</h4>
-                    <p>Docker, FastAPI, Git, Linux, Streamlit</p>
+                    <p>Docker, FastAPI, Git, Linux, Streamlit, OpenCV</p>
                 </div>
                 <div class="skill-category">
-                    <h4>Specializations</h4>
-                    <p>Computer Vision, NLP, MLOps, LLMs, LangChain</p>
+                    <h4>Computer Vision</h4>
+                    <p>Object Detection, Image Segmentation, OCR, YOLO, CNNs</p>
+                </div>
+                <div class="skill-category">
+                    <h4>NLP & LLMs</h4>
+                    <p>Transformers, RAG, Prompt Engineering, Text Generation</p>
                 </div>
             </div>
         </section>
@@ -794,7 +851,7 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <span>Email</span>
-                    <a href="mailto:shagato@example.com">shagato@example.com</a>
+                    <a href="mailto:enamulhasanshagato@gmail.com">enamulhasanshagato@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <span>GitHub</span>
@@ -802,11 +859,11 @@
                 </div>
                 <div class="contact-item">
                     <span>LinkedIn</span>
-                    <a href="https://linkedin.com/in/" target="_blank">linkedin.com/in/shagato</a>
+                    <a href="https://www.linkedin.com/in/shagatomte19/" target="_blank">linkedin.com/in/shagatomte19</a>
                 </div>
                 <div class="contact-item">
                     <span>Scholar</span>
-                    <a href="https://scholar.google.com/" target="_blank">Google Scholar Profile</a>
+                    <a href="https://scholar.google.com/citations?user=nYxmmnsAAAAJ&hl=en" target="_blank">Google Scholar Profile</a>
                 </div>
             </div>
         </section>
@@ -814,7 +871,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Enamul Hasan Shagato. Last updated: January 2025</p>
+            <p>© 2025 Enamul Hasan Shagato · Last updated: January 2025</p>
         </div>
     </footer>
 
